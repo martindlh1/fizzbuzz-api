@@ -1,8 +1,9 @@
 from flask import Flask, request, jsonify
-
+from flask_cors import CORS
 from src.fizzbuzz import generate_fizzbuzz
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/fizzbuzz', methods=['POST'])
